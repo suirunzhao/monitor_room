@@ -184,7 +184,7 @@ function Screen({ frame, panel, children, ...props }) {
 
 function ScreenGIF({ invert, x = 0, y = 0, imageUrl, ...props }) {
   const imgRef = useRef();
-  const texture = useLoader(TextureLoader, '/camera.png'); // Load the image
+  const texture = useLoader(TextureLoader, './camera.png'); // Load the image
 
   return (
     <Screen {...props}>
