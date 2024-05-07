@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/monitor_room/static/css/main.313f2a33.css",
+    "main.js": "/monitor_room/static/js/main.29f21d26.js",
+    "index.html": "/monitor_room/index.html",
+    "main.313f2a33.css.map": "/monitor_room/static/css/main.313f2a33.css.map",
+    "main.29f21d26.js.map": "/monitor_room/static/js/main.29f21d26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.313f2a33.css",
+    "static/js/main.29f21d26.js"
+  ]
+}
