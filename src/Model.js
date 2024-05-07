@@ -9,7 +9,7 @@ import * as THREE from 'three';
 
 export function Model(props) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/Security_Camera_single.glb')
+  const { nodes, materials } = useGLTF('monitor_room/Security_Camera_single.glb')
 
   useFrame((state) => {
     const target = new THREE.Vector3(state.mouse.x*8, state.mouse.y*6, 5);
@@ -107,4 +107,4 @@ export function Model(props) {
 //   );
 // }
 
-useGLTF.preload('/Security_Camera_single.glb')
+useGLTF.preload('monitor_room/Security_Camera_single.glb')

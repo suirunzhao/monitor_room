@@ -18,7 +18,7 @@ Title: Old Computers
 
 const context = createContext()
 export function Instances({ children, ...props }) {
-  const { nodes } = useGLTF('/computers_1-transformed.glb')
+  const { nodes } = useGLTF('monitor_room/computers_1-transformed.glb')
   const instances = useMemo(
     () => ({
       Object: nodes.Object_4,
@@ -46,7 +46,7 @@ export function Instances({ children, ...props }) {
 }
 
 export function Computers(props) {
-  const { nodes: n, materials: m } = useGLTF('/computers_1-transformed.glb')
+  const { nodes: n, materials: m } = useGLTF('monitor_room/computers_1-transformed.glb')
   const instances = useContext(context)
   return (
     <group {...props} dispose={null}>
@@ -167,7 +167,7 @@ export function Computers(props) {
 /* This component renders a monitor (taken out of the gltf model)
    It renders a custom scene into a texture and projects it onto monitors screen */
 function Screen({ frame, panel, children, ...props }) {
-  const { nodes, materials } = useGLTF('/computers_1-transformed.glb')
+  const { nodes, materials } = useGLTF('monitor_room/computers_1-transformed.glb')
   return (
     <group {...props}>
       <mesh castShadow receiveShadow geometry={nodes[frame].geometry} material={materials.Texture} />
@@ -184,7 +184,7 @@ function Screen({ frame, panel, children, ...props }) {
 
 function ScreenGIF({ invert, x = 0, y = 0, imageUrl, ...props }) {
   const imgRef = useRef();
-  const texture = useLoader(TextureLoader, '/camera.png'); // Load the image
+  const texture = useLoader(TextureLoader, 'monitor_room/camera.png'); // Load the image
 
   return (
     <Screen {...props}>
@@ -234,7 +234,7 @@ function ScreenInteractive(props) {
 // Renders flashing LED's
 function Leds({ instances }) {
   const ref = useRef()
-  const { nodes } = useGLTF('/computers_1-transformed.glb')
+  const { nodes } = useGLTF('monitor_room/computers_1-transformed.glb')
   useMemo(() => {
     nodes.Sphere.material = new THREE.MeshBasicMaterial()
     nodes.Sphere.material.toneMapped = false
